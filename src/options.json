@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "comment": {
+      "description": "Remove all \"//...\" and \"/*...*/\" comments.",
+      "type": "boolean"
+    },
+    "whitespace": {
+      "description": "Remove all useless whitespace characters.",
+      "type": "boolean"
+    },
+    "crlf": {
+      "description": "Remove all CRLF characters.",
+      "type": "boolean"
+    },
+    "ignore": {
+      "description": "Remove all CRLF characters.",
+      "anyOf": [
+        {
+          "type": "array"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "instanceof": "RegExp"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
